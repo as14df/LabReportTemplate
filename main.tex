@@ -1,0 +1,26 @@
+\documentclass[fontsize=12pt,BCOR=5mm,DIV=12,parskip=half,listof=totoc,
+               paper=a4,toc=bibliography,numbers=noenddot]{scrreprt}
+
+\input{settings/packages}
+\input{settings/newcommands}
+\input{settings/config}
+\input{settings/colors}
+\input{settings/codestyles}
+
+\begin{document}
+
+\initializeTitle
+\input{content/preambel/title}
+
+\initializePreambel
+\input{content/preambel/listings}
+\input{content/preambel/acros}
+
+\initializeMain
+\input{content/main/content}
+
+\initializeBibliography
+
+\initializeIndex
+
+\end{document}
