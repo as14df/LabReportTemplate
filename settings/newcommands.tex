@@ -14,6 +14,10 @@
 \newcommand{\Location}[1]{\def\TheLocation{#1}}
 \newcommand{\Bibliography}{Literaturverzeichnis}
 
+% Nicer times new roman font for text
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\ttdefault}{cmtt}
+
 \newcommand{\initializeTitle}{
 	\clearpage
 	\setcounter{page}{0}
@@ -34,7 +38,6 @@
 	% Set header
 	\renewcommand*{\chaptermarkformat}{}
 	\automark{chapter}
-	\ohead{\thechapter~\headmark}
 	\chead[]{}
 	% Set arabic page numbering
 	\newcounter{savepage}
@@ -66,6 +69,13 @@
 % Inline Code
 \newcommand{\inlinecode}[2]{\colorbox{backcolour}{\lstinline[language=#1]$#2$}}
 
-% Ugly hack to have no new pages before chapter
-\renewcommand{\cleardoublepage}{}
-\renewcommand{\clearpage}{}
+% For markdown like quotes
+\newmdenv[
+skipabove=30pt,
+	linecolor=red,
+	linewidth=2pt,
+	backgroundcolor=backcolour,
+	topline=false,
+  	rightline=false,
+  	bottomline=false
+]{quotem}

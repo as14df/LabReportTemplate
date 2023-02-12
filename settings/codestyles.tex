@@ -1,6 +1,19 @@
+\lstdefinelanguage{Bash}
+{
+    numbers=none,
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    morekeywords={ls, ps,=,:},
+    keywordstyle={\color{codegreen}\bfseries},
+    literate=
+    *{-lh}{{{\color{codeblue}-lh}}}{1}
+        {\$}{{{\color{codepurple}\$}}}{1}
+        {2}{{{\color{codegreen}2}}}{1}
+}
+
 \lstdefinelanguage{Ini}
 {
-    basicstyle=\ttfamily\small,
+    basicstyle=\ttfamily,
     columns=fullflexible,
     morecomment=[s][\color{codegreen}\bfseries]{[}{]},
     morecomment=[l]{\#},
@@ -58,7 +71,7 @@
     keywordstyle=\color{codepurple},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codeblue},
-    basicstyle=\ttfamily\footnotesize,
+    basicstyle=\ttfamily,
     breakatwhitespace=false,
     breaklines=true,
     captionpos=b,
